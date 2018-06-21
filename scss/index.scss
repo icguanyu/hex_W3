@@ -1,0 +1,202 @@
+.home_contain {
+    width: 1024px;
+    margin: 68px auto 0 auto;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.overview_titel {
+    display: flex;
+    justify-content: space-between;
+    .timezoom {
+        display: flex;
+        align-items: center;
+        letter-spacing: 1px;
+        position: relative;
+        i {
+            margin: 0px 5px;
+        }
+        .now_zoom {
+            font-size: 14px;
+            margin: 0px 20px;
+            color: #888;
+        }
+        .select_zoom {
+            cursor: pointer;
+        }
+        .hide {
+            display: none;
+        }
+        ul {
+            right: 10px;
+            top: 35px;
+            width: 125px;
+            background: #fff;
+            list-style: none;
+            box-shadow: 0px 0px 10px #dedede;
+            position: absolute;
+            li {
+                cursor: pointer;
+                width: 125px;
+                padding: 5px 10px;
+                box-sizing: border-box;
+                &:hover {
+                    color: #fff;
+                    background: #000;
+                }
+            }
+        }
+    }
+}
+
+.overview_contain {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    .overview_box {
+        text-align: center;
+        width: 300px;
+        padding: 20px 0px;
+        box-sizing: border-box;
+        background: #fff;
+        box-shadow: 0px 0px 10px #dedede;
+        span {
+            font-size: 20px;
+        }
+        i {
+            margin: 0 5px;
+            font-size: 20px;
+        }
+        p {
+            margin: 10px 0;
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+    #revenue {
+        color: #7ED321;
+    }
+    #cost {
+        color: #D0021B;
+    }
+    #income {
+        color: #4A90E2;
+    }
+}
+
+.activity {
+    background: #fff;
+    margin: 10px 0;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px #dedede;
+}
+
+.other {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    .otherbox {
+        padding: 20px 30px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 10px #dedede;
+        background: #fff;
+        width: 460px;
+        h2 {
+            margin: 10px 0;
+        }
+    }
+    .item {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+        &:last-child {
+            border: none
+        }
+        .fa-arrow-up {
+            color: #7ED321;
+        }
+        .fa-arrow-down {
+            color: #D0021B;
+        }
+        .website {
+            display: flex;
+            align-items: center;
+            span {
+                color: #999;
+            }
+            i {
+                font-size: 38px;
+                margin-right: 20px;
+            }
+        }
+        .trans_number {
+            display: flex;
+            align-items: center;
+            p {
+                font-weight: 600;
+            }
+            span {
+                font-size: 12px;
+            }
+            i {
+                margin: 0px 10px;
+            }
+            .rise {
+                color: #7ED321;
+            }
+            .down {
+                color: #D0021B;
+            }
+        }
+    }
+    .order {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        &:last-child {
+            border: none
+        }
+        .orderthumb {
+            flex: 2;
+            width: 100px;
+            height: 100px;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .orderinfo {
+            flex: 4;
+            position: relative;
+            padding: 10px 20px;
+            i {
+                margin-right: 8px;
+            }
+            .goods {
+                font-size: 18px;
+            }
+            .date,
+            .buyer {
+                color: #999;
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+        }
+        .orderprice {
+            flex: 1;
+            text-align: right;
+            align-self: flex-end;
+            padding: 10px;
+            span {
+                font-size: 12px;
+            }
+            p {
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+    }
+}

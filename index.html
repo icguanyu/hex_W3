@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>六角學院前端精神時光屋3/9</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/default.css">
+    <link rel="stylesheet" href="scss/index.css">
+
+
+</head>
+
+<body>
+
+
+    <div class="wrap">
+        <div class="header">
+            <div class="top_header">
+                <div class="logo">
+                    <p>後台管理</p>
+                </div>
+                <div class="menu">
+                    <a class="on" href="index.html">首頁</a>
+                    <a href="order.html">訂單</a>
+                    <a href="product.html">產品</a>
+                </div>
+                <div class="sign_out"><i class="fas fa-sign-out-alt"></i><span>登出</span></div>
+            </div>
+        </div>
+
+        <div class="home_contain contain">
+            <div class="overview_titel">
+                <h2> 近況總覽</h2>
+                <div class="timezoom">
+                    <div class="now_zoom"><span>目前顯示：</span><span>2018/6/6<i class="fas fa-caret-right"></i></span><span>2018/6/13</span></div>
+                    <div class="select_zoom"><span>依星期顯示</span></div>
+                    <i class="fas fa-caret-down"></i>
+                    <ul class="select_time hide">
+                        <li>依日期排列</li>
+                        <li>以星期排列</li>
+                        <li>以月份排列</li>
+                        <li>以年度排列</li>
+                        <li>Custom</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="overview_contain">
+                <div class="overview_box"><i class="fas fa-money-check-alt"></i><span>營業額</span>
+                    <p id="revenue"></p>
+                </div>
+                <div class="overview_box"><i class="fas fa-dolly"></i><span>成本</span>
+                    <p id="cost"></p>
+                </div>
+                <div class="overview_box"><i class="fas fa-hand-holding-usd"></i><span>淨收入</span>
+                    <p id="income"></p>
+                </div>
+            </div>
+            <div class="activity">
+                <h2>近期表現</h2>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="other">
+                <div class="otherbox transaction">
+                    <h3> 交易網站</h3>
+                    <div class="item">
+                        <div class="website"><i class="fab fa-facebook-square"></i><span>Facebook.com</span></div>
+                        <div class="trans_number">
+                            <p>45836</p><i class="fas fa-arrow-up"></i><span class="rise">20%</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="website"><i class="fab fa-google"></i><span>Google.com</span></div>
+                        <div class="trans_number">
+                            <p>23582</p><i class="fas fa-arrow-up"></i><span class="rise">12%</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="website"><i class="fab fa-instagram"></i><span>Instagram.com</span></div>
+                        <div class="trans_number">
+                            <p>2489</p><i class="fas fa-arrow-down"></i><span class="down">15%</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="website"><i class="fab fa-twitter"></i><span>Twitter.com</span></div>
+                        <div class="trans_number">
+                            <p>1057</p><i class="fas fa-arrow-down"></i><span class="down">30%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="otherbox last_order">
+                    <h3>最新訂單</h3>
+                    <div class="order">
+                        <div class="orderthumb"><img src="https://images-na.ssl-images-amazon.com/images/I/71usUHct4WL._SX425_.jpg" alt="" /></div>
+                        <div class="orderinfo">
+                            <div class="goods">
+                                <p>哥吉拉布偶</p>
+                            </div>
+                            <div class="date"><i class="fas fa-clock"></i><span>2018/6/13 13:42</span></div>
+                            <div class="buyer"><i class="fas fa-male"></i><span>icguanyu</span></div>
+                        </div>
+                        <div class="orderprice"><span>Total</span>
+                            <p>3200</p>
+                        </div>
+                    </div>
+                    <div class="order">
+                        <div class="orderthumb"><img src="https://images-na.ssl-images-amazon.com/images/I/71usUHct4WL._SX425_.jpg" alt="" /></div>
+                        <div class="orderinfo">
+                            <div class="goods">
+                                <p>哥吉拉布偶</p>
+                            </div>
+                            <div class="date"><i class="fas fa-clock"></i><span>2018/6/13 13:42</span></div>
+                            <div class="buyer"><i class="fas fa-male"></i><span>icguanyu</span></div>
+                        </div>
+                        <div class="orderprice"><span>Total</span>
+                            <p>960</p>
+                        </div>
+                    </div>
+                    <div class="order">
+                        <div class="orderthumb"><img src="https://images-na.ssl-images-amazon.com/images/I/71usUHct4WL._SX425_.jpg" alt="" /></div>
+                        <div class="orderinfo">
+                            <div class="goods">
+                                <p>哥吉拉布偶</p>
+                            </div>
+                            <div class="date"><i class="fas fa-clock"></i><span>2018/6/13 13:42</span></div>
+                            <div class="buyer"><i class="fas fa-male"></i><span>icguanyu</span></div>
+                        </div>
+                        <div class="orderprice"><span>Total</span>
+                            <p>3200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order_contain contain">
+            <div class="top_filter">
+                <label for="select_custom">
+                  <input type="checkbox" id="select_custom">
+                  <span></span>
+                </label>
+
+                <i class="fas fa-caret-down"></i> <i class="fas fa-tags"></i>
+                <div class="edit_section">
+                    <p>編輯選項</p>
+
+                    <i class="fas fa-caret-down"></i> </div>
+            </div>
+            <table cellspacing=0 cellspadding=0>
+                <tr>
+                    <th>顧客名稱</th>
+                    <th>產品清單</th>
+                    <th>總額</th>
+                    <th>訂單成立時間</th>
+                    <th>訂單完成時間</th>
+                    <th>寄送地址</th>
+                    <th>狀態</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                        <span>周杰輪</span>
+                    </td>
+                    <td class="custom_order_list">
+                        <ul>
+                            <li>
+                                <p class="li_product">哥吉拉公仔</p>
+                                <p class="li_price">$1,400</p>
+                                <span class="li_number">1</span>
+                            </li>
+                            <li>
+                                <p class="li_product">哥吉拉公仔</p>
+                                <p class="li_price">$1,400</p>
+                                <span class="li_number">1</span>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p class="total_price">$2,200</p>
+                    </td>
+                    <td>
+                        <p>2018/6/8</p>
+                        <p>13:39</p>
+                    </td>
+                    <td>
+                        <p>2018/6/8</p>
+                        <p>13:39</p>
+                    </td>
+                    <td>
+                        <p>真新鎮</p>
+                    </td>
+                    <td>
+                        <div class="status">
+                            <div class="s_0"><span>處理中</span><i class="fas fa-caret-down"></i></div>
+                            <div class="select_status">
+                                <span>處理中</span>
+                                <span>已付款</span>
+                                <span>運送中</span>
+                                <span>訂單完成</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                        <span>珍煮單</span>
+                    </td>
+                    <td class="custom_order_list">
+                        <ul>
+                            <li>
+                                <p class="li_product">哥吉拉公仔</p>
+                                <p class="li_price">$1,400</p>
+                                <span class="li_number">1</span>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p class="total_price">$2,200</p>
+                    </td>
+                    <td>
+                        <p>2018/6/8</p>
+                        <p>13:39</p>
+                    </td>
+                    <td>
+                        <p>2018/6/8</p>
+                        <p>13:39</p>
+                    </td>
+                    <td>
+                        <p>真新鎮</p>
+                    </td>
+                    <td>
+                        <div class="status">
+                            <div class="s_0"><span>處理中</span><i class="fas fa-caret-down"></i></div>
+                            <div class="select_status">
+                                <span>處理中</span>
+                                <span>已付款</span>
+                                <span>運送中</span>
+                                <span>訂單完成</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                        <span>彭于燕</span>
+                    </td>
+                    <td class="custom_order_list">
+                        <ul>
+                            <li>
+                                <p class="li_product">哥吉拉公仔</p>
+                                <p class="li_price">$1,400</p>
+                                <span class="li_number">1</span>
+                            </li>
+                            <li>
+                                <p class="li_product">哥吉拉公仔</p>
+                                <p class="li_price">$1,400</p>
+                                <span class="li_number">1</span>
+                            </li>
+                            <li>
+                                <p class="li_product">哥吉拉公仔</p>
+                                <p class="li_price">$1,400</p>
+                                <span class="li_number">1</span>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p class="total_price">$2,200</p>
+                    </td>
+                    <td>
+                        <p>2018/6/8</p>
+                        <p>13:39</p>
+                    </td>
+                    <td>
+                        <p>2018/6/8</p>
+                        <p>13:39</p>
+                    </td>
+                    <td>
+                        <p>真新鎮</p>
+                    </td>
+                    <td>
+                        <div class="status">
+                            <div class="s_0"><span>處理中</span><i class="fas fa-caret-down"></i></div>
+                            <div class="select_status">
+                                <span>處理中</span>
+                                <span>已付款</span>
+                                <span>運送中</span>
+                                <span>訂單完成</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                        <span>馬冬錫</span>
+                    </td>
+                    <td class="custom_order_list">
+                        <ul>
+                            <li>
+                                <p class="li_product">哥吉拉公仔</p>
+                                <p class="li_price">$1,400</p>
+                                <span class="li_number">1</span>
+                            </li>
+                            <li>
+                                <p class="li_product">哥吉拉公仔</p>
+                                <p class="li_price">$1,400</p>
+                                <span class="li_number">1</span>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p class="total_price">$2,200</p>
+                    </td>
+                    <td>
+                        <p>2018/6/8</p>
+                        <p>13:39</p>
+                    </td>
+                    <td>
+                        <p>2018/6/8</p>
+                        <p>13:39</p>
+                    </td>
+                    <td>
+                        <p>真新鎮</p>
+                    </td>
+                    <td>
+                        <div class="status">
+                            <div class="s_0"><span>處理中</span><i class="fas fa-caret-down"></i></div>
+                            <div class="select_status">
+                                <span>處理中</span>
+                                <span>已付款</span>
+                                <span>運送中</span>
+                                <span>訂單完成</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                        <span>葉汶</span>
+                    </td>
+                    <td class="custom_order_list">
+                        <ul>
+                            <li>
+                                <p class="li_product">哥吉拉公仔</p>
+                                <p class="li_price">$1,400</p>
+                                <span class="li_number">1</span>
+                            </li>
+                            <li>
+                                <p class="li_product">哥吉拉公仔</p>
+                                <p class="li_price">$1,400</p>
+                                <span class="li_number">1</span>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p class="total_price">$2,200</p>
+                    </td>
+                    <td>
+                        <p>2018/6/8</p>
+                        <p>13:39</p>
+                    </td>
+                    <td>
+                        <p>2018/6/8</p>
+                        <p>13:39</p>
+                    </td>
+                    <td>
+                        <p>真新鎮</p>
+                    </td>
+                    <td>
+                        <div class="status">
+                            <div class="s_0"><span>處理中</span><i class="fas fa-caret-down"></i></div>
+                            <div class="select_status">
+                                <span>處理中</span>
+                                <span>已付款</span>
+                                <span>運送中</span>
+                                <span>訂單完成</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="pages">
+                <span>◂</span>
+                <span class="nowpage">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>▸</span>
+            </div>
+        </div>
+        <div class="product_contain contain"></div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-price-format/2.2.0/jquery.priceformat.min.js'></script>
+
+
+
+    <script src="js/index.js"></script>
+
+
+</body>
+
+</html>
