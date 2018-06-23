@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>六角學院前端精神時光屋3/9</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
     <link rel="stylesheet" href="scss/default.css">
     <link rel="stylesheet" href="scss/product.css">
 
@@ -30,11 +30,244 @@
             </div>
         </div>
 
-        <div class="product_contain contain"></div>
-    </div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-price-format/2.2.0/jquery.priceformat.min.js'></script>
-    <script src="js/product.js"></script>
+        <div class="product_contain contain">
+            <div class="top_filter">
+                <label for="select_custom">
+                    <input type="checkbox" id="select_custom">
+                        <span></span>
+                    </label>
+                <i class="fas fa-caret-down"></i>
+                <div class="edit_section">
+                    <p>新增產品</p>
+                    <i class="fas fa-plus"></i> </div>
+            </div>
+            <table cellspacing=0>
+                <tr>
+                    <th class="product_title">產品名稱</th>
+                    <th>原價</th>
+                    <th>售價</th>
+                    <th>尺寸</th>
+                    <th>顏色</th>
+                    <th>數量</th>
+                    <th>狀態</th>
+                </tr>
+                <tr>
+                    <td class="product">
+                        <label>
+                        <input type="checkbox">
+                        <span></span>
+                        </label>
+                        <div class="thumb"><img src="https://images-na.ssl-images-amazon.com/images/I/71usUHct4WL._SX425_.jpg" alt=""></div>
+                        <p>哥吉拉布偶</p>
+                    </td>
+                    <td>$3,200</td>
+                    <td>$2,800</td>
+                    <td colspan="3" class="product_info">
+                        <ul>
+                            <li>
+                                <div class="szie">L</div>
+                                <div class="color">
+                                    <p>灰色</p>
+                                    <p>黑</p>
+                                </div>
+                                <div class="inventory">
+                                    <p>15</p>
+                                    <p>20</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="szie">M</div>
+                                <div class="color">
+                                    <p>灰色</p>
+                                    <p>黑</p>
+                                </div>
+                                <div class="inventory">
+                                    <p>15</p>
+                                    <p>20</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="szie">S</div>
+                                <div class="color">
+                                    <p>灰色</p>
+                                    <p>黑</p>
+                                </div>
+                                <div class="inventory">
+                                    <p>15</p>
+                                    <p>20</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <div class="status">
+                            <div class="s_0"><span>上架</span><i class="fas fa-caret-down"></i></div>
+                            <div class="select_status">
+                                <span>上架</span>
+                                <span>下架</span>
+                                <span>售罄</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="product">
+                        <label>
+                            <input type="checkbox">
+                            <span></span>
+                            </label>
+                        <div class="thumb"><img src="https://images-na.ssl-images-amazon.com/images/I/71usUHct4WL._SX425_.jpg" alt=""></div>
+                        <p>哥吉拉布偶</p>
+                    </td>
+                    <td>$3,200</td>
+                    <td>$2,800</td>
+                    <td colspan="3" class="product_info">
+                        <ul>
+                            <li>
+                                <div class="szie">L</div>
+                                <div class="color">
+                                    <p>灰色</p>
+                                    <p>黑</p>
+                                </div>
+                                <div class="inventory">
+                                    <p>15</p>
+                                    <p>20</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="szie">M</div>
+                                <div class="color">
+                                    <p>灰色</p>
+                                    <p>黑</p>
+                                </div>
+                                <div class="inventory">
+                                    <p>15</p>
+                                    <p>20</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="szie">S</div>
+                                <div class="color">
+                                    <p>灰色</p>
+                                    <p>黑</p>
+                                </div>
+                                <div class="inventory">
+                                    <p>15</p>
+                                    <p>20</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <div class="status">
+                            <div class="s_0"><span>上架</span><i class="fas fa-caret-down"></i></div>
+                            <div class="select_status">
+                                <span>上架</span>
+                                <span>下架</span>
+                                <span>售罄</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="mask">
+            <div class="addnewproduct">
+                <header>
+                    <p>新增產品</p>
+                    <div class="close">
+                        <span></span>
+                    </div>
+                </header>
+                <div class="editarea">
+                    <div class="upload">
+                        <input type="file" id="uploadimg">
+                        <label class="drag" for="uploadimg">
+                            <i class="fas fa-upload"></i>
+                            <p>Drag an image or click here to upload…</p>
+                        </label>
+                        <div class="imgbox">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/71usUHct4WL._SX425_.jpg" alt="">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/71usUHct4WL._SX425_.jpg" alt="">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/71usUHct4WL._SX425_.jpg" alt="">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/71usUHct4WL._SX425_.jpg" alt="">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/71usUHct4WL._SX425_.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="edit">
+                        <label>產品名稱</label>
+                        <input type="text" class="form-control" placeholder="產品名稱">
+
+                        <label>產品介紹</label>
+                        <textarea name="item_intro" id="item_intro" cols="30" rows="10" placeholder="產品介紹"></textarea>
+                        <p class="remaintext">剩餘300字</p>
+                        <label>價格</label>
+                        <div class="edit_price">
+                            <div class="original">
+                                <span class="input-group-text">原價</span>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="discount">
+                                <span class="input-group-text">優惠價</span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <label>規格</label>
+                        <div class="speci_area">
+                            <div class="specification">
+                                <div class="speci">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="select_size">尺寸</label>
+                                    </div>
+                                    <select class="custom-select" id="select_size">
+                                                <option selected disabled>選擇</option>
+                                                <option value="1">L</option>
+                                                <option value="2">M</option>
+                                                <option value="3">S</option>
+                                            </select>
+                                </div>
+                                <div class="speci">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="select_size">顏色</label>
+                                    </div>
+                                    <select class="custom-select" id="select_size">
+                                                <option selected disabled>選擇</option>
+                                                <option value="1">黑</option>
+                                                <option value="2">灰</option>
+                                                <option value="3">白</option>
+                                            </select>
+                                </div>
+                                <div class="speci">
+                                    <span class="input-group-text">庫存</span>
+                                    <input type="number" class="form-control">
+                                </div>
+                                <div class="remove">
+                                    <i class="far fa-trash-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add_speci">
+                            <p>新增商品規格<i class="fas fa-plus"></i></p>
+                        </div>
+                        <div class="edit_done">
+                            <div class="btns save">儲存(不上架)</div>
+                            <div class="btns publish">完成並上架</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>作者：icguanyu（練習作品W3）<a href="https://github.com/icguanyu">Github</a>｜<a href="https://codepen.io/icguanyu/">Codepen</a></p>
+            <p>特別感謝：<a href="http://www.hexschool.com/courses/">六角學院</a>舉辦The F2E - 前端修練精神時光屋</p>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-price-format/2.2.0/jquery.priceformat.min.js'></script>
+        <script src=" js/product.js "></script>
 
 </body>
 

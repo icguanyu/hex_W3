@@ -1,1 +1,511 @@
-/* No CSS *//*# sourceMappingURL=product.css.map */
+@charset "UTF-8";
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border: 1px solid #e6e6e6;
+  cursor: pointer;
+}
+
+.product_contain {
+  width: 1024px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 68px auto 30px auto;
+  background: #F2F2F2;
+}
+
+.product_contain .top_filter {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 10px 15px;
+  margin: 5px 10px;
+  position: relative;
+}
+
+.product_contain .top_filter label {
+  height: 15px;
+  position: relative;
+}
+
+.product_contain .top_filter input[type="checkbox"] {
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.product_contain .top_filter input[type="checkbox"]:checked + span {
+  background-color: #000;
+  color: white;
+}
+
+.product_contain .top_filter input[type="checkbox"]:checked + span::after {
+  content: '✔';
+}
+
+.product_contain .top_filter span {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+
+.product_contain .top_filter span::after {
+  content: '';
+  font-size: 12px;
+  position: absolute;
+  left: 3px;
+  top: -2px;
+}
+
+.product_contain .top_filter i {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.product_contain .top_filter .edit_section {
+  font-size: 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  padding: 3px 15px;
+  box-sizing: border-box;
+}
+
+.product_contain table {
+  font-size: 14px;
+  width: 940px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.product_contain table th {
+  font-weight: 400;
+  background-color: #fff;
+  height: 40px;
+}
+
+.product_contain table tr {
+  padding: 10px 0px;
+}
+
+.product_contain table tr:nth-child(odd) {
+  background-color: #EBEBEB;
+}
+
+.product_contain table td {
+  vertical-align: text-top;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.product_contain table ul,
+.product_contain table li {
+  margin: 0;
+  padding: 0;
+}
+
+.product_contain table ul {
+  list-style: none;
+}
+
+.product_contain table .product_title {
+  width: 220px;
+}
+
+.product_contain table .product {
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.product_contain table .product img {
+  width: 50px;
+  margin: 0px 15px;
+}
+
+.product_contain table .product label {
+  position: relative;
+}
+
+.product_contain table .product input[type="checkbox"] {
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.product_contain table .product input[type="checkbox"]:checked + span {
+  background-color: #13a8ff;
+  color: white;
+}
+
+.product_contain table .product input[type="checkbox"]:checked + span::after {
+  content: '✔';
+}
+
+.product_contain table .product span {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.product_contain table .product span::after {
+  content: '';
+  font-size: 12px;
+  position: absolute;
+  left: 5px;
+  top: -1px;
+}
+
+.product_contain table .product_info li {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #fff;
+}
+
+.product_contain table .product_info li:last-child {
+  border-bottom: none;
+}
+
+.product_contain table .product_info li div {
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.product_contain table .status {
+  color: #fff;
+  position: relative;
+}
+
+.product_contain table .status div:nth-child(1) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  margin-right: 15px;
+}
+
+.product_contain table .status .select_status {
+  display: none;
+  z-index: 2;
+  width: calc(100% - 15px);
+  color: #000;
+  background: #fff;
+  top: 40px;
+  position: absolute;
+  box-shadow: 0px 0px 10px #dedede;
+}
+
+.product_contain table .status .select_status::before {
+  content: '';
+  z-index: -1;
+  left: 50%;
+  top: 0;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  transform: rotate(45deg) translateX(-50%);
+}
+
+.product_contain table .status .select_status span {
+  margin-right: 0;
+  border-radius: 0;
+}
+
+.product_contain table .status .select_status span:hover {
+  background: #000;
+  color: #fff;
+}
+
+.product_contain table .status .show_status_list {
+  display: block;
+}
+
+.product_contain table .status span {
+  cursor: pointer;
+  font-weight: 400;
+  padding: 5px;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.product_contain table .status span i {
+  font-size: 12px;
+  margin: 0 5px;
+}
+
+.product_contain table .status .s_0 {
+  background: #7ED321;
+}
+
+.product_contain table .status .s_1 {
+  background: #ff3232;
+}
+
+.product_contain table .status .s_2 {
+  background: #888;
+}
+
+.mask {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.mask .addnewproduct {
+  width: 940px;
+  height: 700px;
+  opacity: 0;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+  transform: translateY(-20%);
+  transition: .5s;
+}
+
+.mask header {
+  width: 100%;
+  height: 64px;
+  background: #000;
+  color: #fff;
+  padding: 0px 25px;
+  box-sizing: border-box;
+  font-size: 24px;
+  line-height: 64px;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mask header .close {
+  position: relative;
+}
+
+.mask header .close span {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+}
+
+.mask header .close span::before, .mask header .close span::after {
+  position: absolute;
+  content: '';
+  border-radius: 4px;
+  display: block;
+  top: 50%;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transition: .3s;
+}
+
+.mask header .close span::before {
+  transform: rotate(45deg);
+}
+
+.mask header .close span::after {
+  transform: rotate(-45deg);
+}
+
+.mask header .close span:hover::before {
+  transform: rotate(-45deg);
+}
+
+.mask header .close span:hover::after {
+  transform: rotate(45deg);
+}
+
+.mask_on {
+  display: flex;
+}
+
+.mask_on .addnewproduct {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.editarea {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.editarea .upload {
+  flex: 4;
+}
+
+.editarea .upload input[type="file"] {
+  display: none;
+}
+
+.editarea .upload .drag {
+  cursor: pointer;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  height: 115px;
+  color: #757575;
+  background: #EBEBEB;
+  box-sizing: border-box;
+}
+
+.editarea .upload .drag i {
+  font-size: 36px;
+}
+
+.editarea .upload .drag p {
+  margin: 10px 0;
+}
+
+.editarea .upload .imgbox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.editarea .upload .imgbox img {
+  margin: 3px;
+  width: 110px;
+  height: 110px;
+}
+
+.editarea .edit {
+  padding: 0 20px;
+  flex: 5;
+  height: 550px;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+.editarea .edit input {
+  outline: none;
+}
+
+.editarea .edit textarea {
+  width: 100%;
+  height: 100px;
+  display: block;
+  outline: none;
+  padding: 10px;
+}
+
+.editarea .edit .remaintext {
+  font-size: 12px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.editarea .edit label {
+  margin: 5px 0;
+}
+
+.editarea .edit ::placeholder {
+  color: #aaa;
+  letter-spacing: 3px;
+}
+
+.editarea .edit .edit_price {
+  display: flex;
+}
+
+.editarea .edit .edit_price > * {
+  display: flex;
+  margin-right: 5px;
+}
+
+.editarea .edit .specification {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.editarea .edit .specification label {
+  margin: 0;
+}
+
+.editarea .edit .specification .speci {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.editarea .edit .specification .remove {
+  cursor: pointer;
+}
+
+.editarea .edit .add_speci {
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+  text-align: center;
+  padding: 5px;
+  letter-spacing: 3px;
+  border-radius: 3px;
+}
+
+.editarea .edit .add_speci i {
+  margin: 0 10px;
+}
+
+.editarea .edit .edit_done {
+  padding-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.editarea .edit .edit_done .btns {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 0px 10px;
+  border-radius: 4px;
+}
+
+.editarea .edit .edit_done .save {
+  color: #757575;
+}
+
+.editarea .edit .edit_done .publish {
+  color: #fff;
+  background: #000;
+}
+/*# sourceMappingURL=product.css.map */
