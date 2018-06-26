@@ -2,17 +2,26 @@
   width: 1024px;
   margin: 68px auto 0 auto;
   padding: 20px 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .overview_titel {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .overview_titel .timezoom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   letter-spacing: 1px;
   position: relative;
 }
@@ -41,7 +50,8 @@
   width: 125px;
   background: #fff;
   list-style: none;
-  box-shadow: 0px 0px 10px #dedede;
+  -webkit-box-shadow: 0px 0px 10px #dedede;
+          box-shadow: 0px 0px 10px #dedede;
   position: absolute;
 }
 
@@ -49,7 +59,8 @@
   cursor: pointer;
   width: 125px;
   padding: 5px 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .overview_titel .timezoom ul li:hover {
@@ -58,8 +69,12 @@
 }
 
 .overview_contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10px 0;
 }
 
@@ -67,9 +82,11 @@
   text-align: center;
   width: 300px;
   padding: 20px 0px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: #fff;
-  box-shadow: 0px 0px 10px #dedede;
+  -webkit-box-shadow: 0px 0px 10px #dedede;
+          box-shadow: 0px 0px 10px #dedede;
 }
 
 .overview_contain .overview_box span {
@@ -103,20 +120,28 @@
   background: #fff;
   margin: 10px 0;
   padding: 20px 40px;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 10px #dedede;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 10px #dedede;
+          box-shadow: 0px 0px 10px #dedede;
 }
 
 .other {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .other .otherbox {
   padding: 20px 30px;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 10px #dedede;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 10px #dedede;
+          box-shadow: 0px 0px 10px #dedede;
   background: #fff;
   width: 460px;
 }
@@ -126,8 +151,12 @@
 }
 
 .other .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
 }
@@ -145,8 +174,12 @@
 }
 
 .other .item .website {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .other .item .website span {
@@ -159,8 +192,12 @@
 }
 
 .other .item .trans_number {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .other .item .trans_number p {
@@ -184,8 +221,11 @@
 }
 
 .other .order {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
@@ -195,7 +235,9 @@
 }
 
 .other .order .orderthumb {
-  flex: 2;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   width: 100px;
   height: 100px;
 }
@@ -206,7 +248,9 @@
 }
 
 .other .order .orderinfo {
-  flex: 4;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
   position: relative;
   padding: 10px 20px;
 }
@@ -227,9 +271,12 @@
 }
 
 .other .order .orderprice {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: right;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   padding: 10px;
 }
 
@@ -241,4 +288,3 @@
   font-size: 18px;
   font-weight: 600;
 }
-/*# sourceMappingURL=index.css.map */
